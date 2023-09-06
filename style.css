@@ -6,22 +6,195 @@
 
 html {
   box-sizing: border-box;
+  font-size: calc(100vw / 1920 * 10);
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+:root {
+  --blue-opacity: rgba(56, 119, 238, 0.7);
+  --blue: #3877ee;
+  --green-opacity: rgba(106, 191, 75, 0.7);
+  --green: #6abf4b;
+  --background: #020f20;
+  --white: #fff;
 }
 
 body {
   padding: 0;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
 }
 
 .wrapper {
+  position: relative;
   width: 100vw;
   height: 100dvh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('./bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+}
+
+.wrapper__img {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper__img span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background: var(--background);
+}
+
+.img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.marker {
+  position: absolute;
+}
+
+.marker_1 {
+  top: 26%;
+  right: 69%;
+}
+
+.marker_2 {
+  top: 45%;
+  left: 36%;
+}
+
+.marker_3 {
+  top: 61%;
+  left: 26%;
+}
+
+.marker_4 {
+  top: 38%;
+  left: 59%;
+}
+
+.marker_5 {
+  top: 60%;
+  left: 56%;
+}
+
+.marker_6 {
+  top: 76%;
+  left: 59%;
+}
+
+.marker_7 {
+  top: 21%;
+  left: 71%;
+}
+
+.marker_8 {
+  top: 44%;
+  left: 74%;
+}
+
+.marker_9 {
+  top: 63%;
+  left: 70%;
+}
+
+.marker_10 {
+  top: 71%;
+  left: 87%;
+}
+
+.marker__content {
+  position: relative;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.1rem;
+  height: 4.1rem;
+  border-radius: 50%;
+}
+
+.btn__icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.line {
+  position: absolute;
+  width: 1rem;
+  height: 0.2rem;
+  background-color: var(--white);
+}
+
+.line:last-child {
+  transform: rotate(90deg);
+}
+
+.wrapper__title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  min-height: 4.1rem;
+  padding: 0 15px 0 4.1rem;
+  border-radius: 100px;
+  opacity: 0;
+  z-index: 5;
+  transition: all 0.3s ease-in;
+}
+
+.title_blue {
+  background-color: var(--blue);
+}
+
+.title_green {
+  background-color: var(--green);
+}
+
+.wrapper__title.open {
+  opacity: 1;
+}
+
+.title {
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.btn_blue {
+  background-color: var(--blue-opacity);
+  transition: all 0.3s ease-in;
+}
+
+.btn_green {
+  background-color: var(--green-opacity);
+  transition: all 0.3s ease-in;
+}
+
+.btn_blue:hover {
+  background-color: var(--blue);
+}
+
+.btn_green:hover {
+  background-color: var(--green);
 }
