@@ -22,6 +22,7 @@ button {
   --green: #6abf4b;
   --background: #020f20;
   --white: #fff;
+  --transition: all 0.3s ease-in;
 }
 
 body {
@@ -143,6 +144,7 @@ body {
   width: 1rem;
   height: 0.2rem;
   background-color: var(--white);
+  transition: var(--transition);
 }
 
 .line:last-child {
@@ -160,7 +162,7 @@ body {
   border-radius: 100px;
   opacity: 0;
   z-index: 5;
-  transition: all 0.3s ease-in;
+  transition: var(--transition);
 }
 
 .title_blue {
@@ -183,12 +185,12 @@ body {
 
 .btn_blue {
   background-color: var(--blue-opacity);
-  transition: all 0.3s ease-in;
+  transition: var(--transition);
 }
 
 .btn_green {
   background-color: var(--green-opacity);
-  transition: all 0.3s ease-in;
+  transition: var(--transition);
 }
 
 .btn_blue:hover {
